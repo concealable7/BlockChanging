@@ -19,12 +19,12 @@ public class InventoryListener implements Listener {
 	HashSet<Material> m = new HashSet<>(); 
 	
 	@EventHandler
-	public void InvEvent(BlockBreakEvent e) {
+	public void InvEvent(PlayerInteractEvent e) {
 		
 		Player p = (Player) e.getPlayer();
 		
 		if (p.getItemInHand().getItemMeta().getDisplayName().equals(ChatColor.GREEN + "Block Tool")) {
-			p.getTargetBlock((Set<Material>)null, 1).setType(Material.DIAMOND_BLOCK);
+			e.getClickedBlock().setType(Material.DIAMOND_BLOCK);
 		}
 	}
 }
