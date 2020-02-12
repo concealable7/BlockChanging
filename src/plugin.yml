@@ -1,0 +1,10 @@
+name: BlockChanging
+version: 1.0
+author: WarMachine
+main: me.warmachine.blockchanging.Main
+description: First REAL plugin by WarMachine.=
+
+commands:
+  blocktool:
+    aliases: [bt]
+    description: Get your Block Tool today!
